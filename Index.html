@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Proteções básicas contra XSS -->
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                    img-src 'self' https:;
+                    style-src 'self';
+                    script-src 'self';
+                    connect-src 'self';">
+
+        <title>Marcato Redações | Curso de Redação </title>
+        <meta name="description" content="Adicionar descrição.">
+
+        <link rel="stylesheet" href="Style.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo1">Marcato </span><span class="logo2">Redações</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#matricula">Matrículas</a></li>
+                    <li><a href="#redesSociais">Redes Sociais</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+
+            <section class="cabeçalho">
+                <div class="cabeçalho-conteúdo">
+                    <h2>Slogan<br>Frase de impacto</h2>
+                    <p>Outra frase secundária</p>
+                    <a href="#matricula" class="btn-primary">Matrículi-se já</a>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section id="sobre" class="section">
+                <h2>Sobre</h2>
+                <p>
+                ...
+                </p>
+            </section>
+
+            <section id="cursos" class="section">
+                <h2>Ofertas de cursos</h2>
+                <div class="cursos-grid">
+                    <div class="cursos-card">
+                        <div class="img-wrapper">
+                            <img src="Imagens/ENEM.jpeg" alt="ENEM">
+                        </div>
+                        <br>
+                        <h3>ENEM</h3>
+                        <p>Um mês de aula em uma turma fechada!</p>
+                        <p>Sobre a banca do ENEM</p>
+                        <br>
+                        <h4>Confira aqui</h4>
+                        <br>
+                    </div>
+
+                    <div class="cursos-card">
+                        <div class="img-wrapper">
+                            <img src="Imagens/Vunesp.jpg" alt="Vunesp">
+                        </div>
+                        <br>
+                        <h3>Vunesp</h3>
+                        <p>Um mês de aula em uma turma fechada!</p>
+                        <p>Sobre a banca da Vunesp</p>
+                        <br>
+                        <h4>Confira aqui</h4>
+                        <br>
+                    </div>
+
+                    <div class="cursos-card">
+                        <div class="img-wrapper">
+                            <img src="Imagens/Fuvest.webp" alt="Fuvest">
+                        </div>
+                        <br>
+                        <h3>Fuvest</h3>
+                        <p>Um mês de aula em uma turma fechada!</p>
+                        <p>Sobre a banca da Fuvest</p>
+                        <br>
+                        <h4>Confira aqui</h4>
+                        <br>
+                    </div>
+
+                    <div class="cursos-card">
+                        <div class="img-wrapper">
+                            <img src="Imagens/Unicamp.jpg" alt="Unicamp">
+                        </div>
+                        <br>
+                        <h3>Unicamp</h3>
+                        <p>Um mês de aula em uma turma fechada!</p>
+                        <p>Sobre a banca da Unicamp</p>
+                        <br>
+                        <h4>Confira aqui</h4>
+                        <br>
+                    </div>
+                </div>
+            </section>
+
+            <section id="matricula" class="section highlight">
+                <h2>Inscrição</h2>
+                <p>
+                Matrícula via PicPay com acesso imediato.
+                Ambiente seguro e sem letras miúdas.
+                </p>
+                <a href="https://picpay.me/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                Pagar com PicPay
+                </a>
+            </section>
+
+            <section id="redesSociais" class="section">
+                <h2>Siga-nos nas Redes Sociais</h2>
+                <div class="socials">
+                    <a href="https://www.instagram.com/marcato_redacoes?igsh=MWJ1ZGVicTBjOGk2bA==" target="_blank" rel="noopener noreferrer"><img src="Imagens/Insta-removebg-preview.png"></img></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="Imagens/Whats-removebg-preview.png"></img></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="Imagens/Tiktok-removebg-preview.png"></img></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Marcato Redações</p>
+        </footer>
+
+    <script src="Script.js" defer></script>
+    </body>
+</html>
