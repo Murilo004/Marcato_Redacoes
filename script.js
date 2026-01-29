@@ -9,4 +9,5 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   });
+
 });
