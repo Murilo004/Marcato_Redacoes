@@ -111,7 +111,7 @@ body {
     margin-top: 2rem;
 }
 
-.highlight h2{
+.highlight h2 {
     color: var(--tertiary);
 }
 
@@ -123,7 +123,7 @@ body {
     max-width: 500px;
 }
 
-.cursos span{
+.cursos span {
     color: var(--quinary);
 }
 
@@ -140,7 +140,7 @@ body {
     margin-top: 2.5rem;
 }
 
-.correção-grid div{
+.correção-grid div {
     height: 200px;
 }
 
@@ -163,7 +163,8 @@ body {
 }
 
 .normal-card {
-    height: 350px;
+    min-height: 350px;
+    height: auto;
     background: var(--primary);
     color: var(--white);
     border-radius: 18px;
@@ -180,7 +181,7 @@ body {
     cursor: pointer;
 }
 
-.normal-card a{
+.normal-card a {
     text-decoration: none;
     color: inherit;
 }
@@ -207,7 +208,8 @@ body {
 
 .vip-card {
     width: 100%;
-    height: 350px;
+    min-height: 350px;
+    height: auto;
     background: var(--primary);
     color: var(--white);
     border-radius: 18px;
@@ -224,7 +226,7 @@ body {
     cursor: pointer;
 }
 
-.vip-card a{
+.vip-card a {
     text-decoration: none;
     color: inherit;
 }
@@ -250,13 +252,12 @@ body {
 }
 
 /*IMAGES*/
-.img-sobre img{
+.img-sobre img {
     width: 300px;
     height: 200px;
     float: right;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 30px;
     border-top: 6px solid var(--tertiary); 
     border-left: 6px solid var(--tertiary); 
     border-bottom: 8px solid var(--secondary); 
@@ -302,7 +303,7 @@ body {
     color: var(--primary);
 }
 
-.socials img{
+.socials img {
     height: 70px;
 }
 
@@ -325,5 +326,31 @@ body {
 @media (max-width: 600px) {
     .correção-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .normal-card,
+    .vip-card {
+        padding: 1.5rem;
+        min-height: unset; /* deixa o conteúdo mandar */
+    }
+
+    .normal-card h2,
+    .vip-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .normal-card h3,
+    .vip-card h3 {
+        font-size: 1rem;
+    }
+
+    .img-sobre img {
+        float: none;              /* desativa lado a lado */
+        display: block;
+        margin: 0 auto 1.5rem auto; /* centraliza e cria espaço */
+        width: 85%;
+        height: auto;
     }
 }
