@@ -163,7 +163,6 @@ body {
 }
 
 .normal-card {
-    min-height: 350px;
     height: auto;
     background: var(--primary);
     color: var(--white);
@@ -208,7 +207,6 @@ body {
 
 .vip-card {
     width: 100%;
-    min-height: 350px;
     height: auto;
     background: var(--primary);
     color: var(--white);
