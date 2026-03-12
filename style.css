@@ -274,6 +274,8 @@ body {
 
 .btn-primary:hover {
     background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(214,51,132,0.4);
 }
 
 /* SOCIAL */
