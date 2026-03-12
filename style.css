@@ -2,10 +2,9 @@
     --primary: #1f2a9e;
     --secondary: #bf00ff;
     --tertiary: #f844c2;
-    --quaternary: #02d4ed;
-    --quinary: #feed00;
+    --quaternary: #feed00;
     --accent: #d9f2f2;
-    --bg: #090738;
+    --bg: #fab5ff;
     --text: #1a1a1a;
     --white: #ffffff;
 }
@@ -44,25 +43,19 @@ body {
 }
 
 .nav a {
-    color: var(--white);
+    color: var(--primary);
     text-decoration: none;
     font-weight: 600;
 }
 
 .nav a:hover{
-    color: #f844c2;
+    color: var(--secondary);
 }
 
 .logo1 {
     font-weight: 800;
     font-size: 1.3rem;
-    color: var(--tertiary);
-}
-
-.logo2 {
-    font-weight: 800;
-    font-size: 1.3rem;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 /* CABEÇALHO*/
@@ -91,7 +84,7 @@ body {
 }
 
 .section h2 {
-    color: var(--tertiary);
+    color: var(--primary);
 }
 
 .section-correção {
@@ -102,7 +95,7 @@ body {
 }
 
 .section-correção h2 {
-    color: var(--tertiary);
+    color: var(--primary);
 }
 
 .highlight {
@@ -124,7 +117,7 @@ body {
 }
 
 .cursos span {
-    color: var(--quinary);
+    color: var(--tertiary);
 }
 
 .cursos-grid {
@@ -158,7 +151,6 @@ body {
 
 .sobre-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 32px var(--tertiary);
     cursor: pointer;
 }
 
@@ -170,13 +162,12 @@ body {
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: 0 14px 32px var(--quaternary);
+    box-shadow: 0 14px 32px var(--tertiary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .normal-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 32px var(--tertiary);
     cursor: pointer;
 }
 
@@ -187,22 +178,8 @@ body {
 
 .normal-card h2 {
     margin-bottom: 0.5rem;
-    color: var(--quaternary);
+    color: var(--tertiary);
     text-align: center;
-}
-
-.normal-card:hover h2 {
-    color: var(--tertiary);
-}
-
-.normal-card h3 {
-    margin-bottom: 0.5rem;
-    color: var(--quaternary);
-    text-align: right;
-}
-
-.normal-card:hover h3 {
-    color: var(--tertiary);
 }
 
 .vip-card {
@@ -214,13 +191,12 @@ body {
     text-align: left;
     padding-left: 18px;
     padding-right: 18px;
-    box-shadow: 0 28px 64px var(--quinary);
+    box-shadow: 0 28px 64px var(--quaternary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vip-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 28px 64px var(--secondary);
     cursor: pointer;
 }
 
@@ -231,22 +207,8 @@ body {
 
 .vip-card h2 {
     margin-bottom: 0.5rem;
-    color: var(--quinary);
+    color: var(--quaternary);
     text-align: center;
-}
-
-.vip-card:hover h2 {
-    color: var(--secondary);
-}
-
-.vip-card h3 {
-    margin-bottom: 0.5rem;
-    color: var(--quinary);
-    text-align: right;
-}
-
-.vip-card:hover h3 {
-    color: var(--secondary);
 }
 
 /*IMAGES*/
@@ -268,7 +230,7 @@ body {
     margin-top: 1.5rem;
     padding: 0.9rem 1.8rem;
     border-radius: 30px;
-    background: var(--bg);
+    background: var(--primary);
     color: var(--white);
     border: 3px solid;
     border-color: var(--white);
