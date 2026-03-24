@@ -1,10 +1,18 @@
 :root {
 
-    /* CORES */
+    /* ROSA (primário) */
     --primary: #D63384;
     --primary-dark: #A61E62;
-    --primary-soft: #F7D6E6;
 
+    /* AZUL ROYAL (secundário) */
+    --royal: #00d2eb;
+    --royal-dark: #2f94b5;
+
+    /* ROXO (terciário) */
+    --purple: #7b2cbf;
+    --purple-glow: rgba(123, 44, 191, 0.8);
+
+    /* NEUTROS */
     --bg: #F9F5F7;
     --surface: #FFFFFF;
 
@@ -15,7 +23,8 @@
 
     /* SOMBRAS */
     --shadow-soft: 0 8px 20px rgba(0,0,0,0.08);
-    --shadow-medium: 0 14px 32px rgba(0,0,0,0.12);
+    --shadow-medium: 0 0 25px var(--purple-glow);
+    --shadow-medium-hover: 0 0 40px var(--purple-glow);
 }
 
 /* RESET */
@@ -47,7 +56,7 @@ body {
 /* HEADER */
 
 .header {
-    background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(120deg, var(--royal), var(--purple), var(--primary));
 }
 
 .nav {
@@ -77,6 +86,8 @@ body {
     text-decoration: none;
 }
 
+/* underline animado agora azul */
+
 .nav a::after {
     content: "";
     position: absolute;
@@ -84,7 +95,7 @@ body {
     height: 2px;
     left: 0;
     bottom: -3px;
-    background: var(--primary);
+    background: var(--royal);
     transition: 0.3s;
 }
 
@@ -103,6 +114,103 @@ body {
 .cabeçalho h2 {
     font-size: clamp(1.6rem, 3vw, 2rem);
     margin-bottom: 1rem;
+}
+
+/* CAROSSEL */
+.carrossel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.carrossel-container {
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 100%;
+    background: var(--surface);
+    border-radius: 18px;
+    padding: 2rem;
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.prova-social {
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+
+.prova-social h2 {
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+}
+
+.nota {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--royal), #7b2cbf, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.comentario {
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.aluno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.aluno img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+.btn-nav {
+    position: absolute;
+    z-index: 999;
+    top: 92%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: var(--royal);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
 }
 
 /* SECTIONS */
@@ -178,26 +286,20 @@ body {
 }
 
 .sobre-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px) scale(1.02);
 }
 
 /* CARDS PADRONIZADOS */
 
 .normal-card,
 .vip-card {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 2rem;
     border-radius: 18px;
-    border: 1px solid rgba(0,0,0,0.06);
-
     min-height: 240px;
-
     gap: 0.8rem;
-
     transition: all 0.25s ease;
 }
 
@@ -207,7 +309,7 @@ body {
 }
 
 .normal-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
@@ -222,15 +324,17 @@ body {
     text-align: center;
 }
 
+/* CARD VIP agora mistura rosa + azul */
+
 .vip-card {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(120deg, var(--royal), var(--purple), var(--primary));
     color: var(--white);
     box-shadow: var(--shadow-medium);
 }
 
 .vip-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-medium-hover);
 }
 
 .vip-card a {
@@ -273,15 +377,15 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: var(--royal);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(214,51,132,0.4);
+    box-shadow: 0 10px 25px rgba(65,105,225,0.35);
 }
 
 /* SOCIAL */
 
 .redesSociais {
-    background: var(--primary-hard);
+    background: linear-gradient(120deg, var(--royal), var(--purple), var(--primary));
 }
 
 .socials {
@@ -294,7 +398,7 @@ body {
 .socials a {
     text-decoration: none;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--royal);
 }
 
 .socials img {
@@ -304,8 +408,8 @@ body {
 /* FOOTER */
 
 .footer {
-    background: var(--primary);
-    border-top: 3px solid var(--primary-dark);
+    background: linear-gradient(120deg, var(--royal), var(--purple), var(--primary));
+    border-top: 3px solid var(--royal-dark);
     padding: 2rem;
     text-align: center;
     font-size: 0.9rem;
@@ -337,5 +441,19 @@ body {
         margin: 0 auto 1.5rem auto;
         width: 85%;
         height: auto;
+    }
+
+    .prev {
+        left: 30px;
+    }
+
+    .next {
+        right: 30px;
+    }
+
+    .btn-nav {
+        top: 105%;
+        font-size: 1.4rem;
+        padding: 0.4rem 0.7rem;
     }
 }
