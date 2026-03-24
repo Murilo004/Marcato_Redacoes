@@ -110,10 +110,24 @@ body {
     padding: 4rem 1.5rem;
     text-align: center;
     color: var(--white);
+    filter: brightness(1x);
+
+    background:
+        linear-gradient(
+        120deg,
+        rgba(214,51,132,0.6),   /* rosa dominante */
+        rgba(123,44,191,0.6),   /* roxo */
+        rgba(0,210,235,0.4)     /* azul leve */
+        ),
+    url("Imagens/Nebulosa\ brilhante\ e\ estelar.png");
+
+    background-size: cover;
+    background-position: center;
 }
 
 .cabeçalho h2 {
     font-size: clamp(1.6rem, 3vw, 2rem);
+    letter-spacing: 0.5px;
     margin-bottom: 1rem;
 }
 
