@@ -175,7 +175,6 @@ body {
     font-size: 2.8rem;
     font-weight: 800;
     background: var(--gradient);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -399,11 +398,6 @@ body {
 }
 
 /* SOCIAL */
-
-.redesSociais {
-    background: var(--gradient);
-}
-
 .socials {
     display: flex;
     justify-content: center;
