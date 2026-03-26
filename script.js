@@ -38,64 +38,71 @@ if (toggle && navLinks) {
 }
 
 //Carossel animação
-function updateCarousel() {
-  carrossel.style.transform = `translateX(-${index * 100}%)`;
-}
+const carrossel = document.querySelector('.carrossel');
+const cards = document.querySelectorAll('.card');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
-function nextSlide() {
-  index = (index + 1) % cards.length;
-  updateCarousel();
-}
+if (carrossel && next && prev && cards.length > 0) {
+  function updateCarousel() {
+    carrossel.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-function prevSlide() {
-  index = (index - 1 + cards.length) % cards.length;
-  updateCarousel();
-}
+  function nextSlide() {
+    index = (index + 1) % cards.length;
+    updateCarousel();
+  }
 
-function startAutoPlay() {
-  interval = setInterval(nextSlide, 20000); // 30 segundos
-}
+  function prevSlide() {
+    index = (index - 1 + cards.length) % cards.length;
+    updateCarousel();
+  }
 
-function resetAutoPlay() {
-  clearInterval(interval);
-  startAutoPlay();
-}
+  function startAutoPlay() {
+    interval = setInterval(nextSlide, 20000);
+  }
 
-next.addEventListener('click', () => {
-  nextSlide();
-  resetAutoPlay();
-});
+  function resetAutoPlay() {
+    clearInterval(interval);
+    startAutoPlay();
+  }
 
-prev.addEventListener('click', () => {
-  prevSlide();
-  resetAutoPlay();
-});
-
-startAutoPlay();
-
-//Carossel delize
-let startX = 0;
-let endX = 0;
-const threshold = 50;
-
-carrossel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-carrossel.addEventListener("touchend", (e) => {
-  endX = e.changedTouches[0].clientX;
-  handleSwipe();
-});
-
-function handleSwipe() {
-  const diff = startX - endX;
-
-  if (Math.abs(diff) > threshold) {
-    if (diff > 0) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
+  next.addEventListener('click', () => {
+    nextSlide();
     resetAutoPlay();
+  });
+
+  prev.addEventListener('click', () => {
+    prevSlide();
+    resetAutoPlay();
+  });
+
+  startAutoPlay();
+
+  // swipe
+  let startX = 0;
+  let endX = 0;
+  const threshold = 50;
+
+  carrossel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carrossel.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+      resetAutoPlay();
+    }
   }
 }
