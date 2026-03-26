@@ -77,10 +77,6 @@ body {
     gap: 1rem;
 }
 
-.nav-links.active {
-    transform: translateX(0);
-}
-
 .nav a,
 .nav a:visited {
     position: relative;
@@ -446,9 +442,9 @@ body {
         position: absolute;
         top: 100%;
         right: 10px;
+        gap: 0;
 
-        width: 75%;
-        max-width: 280px;
+        width: 220px;
 
         display: flex;
         flex-direction: column;
