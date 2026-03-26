@@ -525,8 +525,7 @@ body {
     .nav-links li:not(:last-child) {
         border-bottom: 1px solid transparent;
         border-image: var(--gradient);
-        border-image-slice: 1;
-        opacity: 0.6;
+        border-image-slice: 1.5;
     }
 
     .correção-grid {
