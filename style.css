@@ -470,7 +470,7 @@ body {
     /* MENU ABERTO */
     .nav-links.active {
         max-height: 300px;
-        opacity: 0;
+        opacity: 1;
         padding: 1rem 1.5rem;
     }
 
@@ -483,7 +483,7 @@ body {
 
     .nav-links.active li {
         transform: translateY(0);
-        opacity: 0;
+        opacity: 1;
     }
 
     .nav-links a {
