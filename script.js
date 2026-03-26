@@ -11,23 +11,33 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-//Nav botão animação
+// Nav botão animação
 const toggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+if (toggle && navLinks) {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita conflito com click global
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    const isClickInsideMenu = navLinks.contains(e.target);
+    const isClickOnButton = toggle.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnButton) {
+      navLinks.classList.remove('active');
+    }
+  });
+}
 
 //Carossel animação
-const carrossel = document.querySelector('.carrossel');
-const cards = document.querySelectorAll('.card');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
-
-let index = 0;
-let interval;
-
 function updateCarousel() {
   carrossel.style.transform = `translateX(-${index * 100}%)`;
 }

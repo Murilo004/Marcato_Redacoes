@@ -378,6 +378,7 @@ body {
     border: none;
     cursor: pointer;
     color: var(--primary);
+    touch-action: manipulation;
 }
 
 .btn-primary {
