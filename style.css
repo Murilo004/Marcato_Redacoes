@@ -518,28 +518,15 @@ body {
         opacity: 0.9;
     }
 
-    .nav-links a::after {
-        content: "";
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        width: 100%;
-        height: 1px;
-
-        background: linear-gradient(
-            90deg,
-            var(--primary),
-            var(--purple),
-            var(--royal)
-        );
-
-        opacity: 0.4;
-    }
-
     .nav-links li {
         width: 100%;
+    }
+
+    .nav-links li:not(:last-child) {
+        border-bottom: 1px solid transparent;
+        border-image: var(--gradient);
+        border-image-slice: 1;
+        opacity: 0.6;
     }
 
     .correção-grid {
