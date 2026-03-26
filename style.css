@@ -445,8 +445,10 @@ body {
     .nav-links {
         position: absolute;
         top: 100%;
-        right: 0;
-        width: 100%;
+        right: 10px;
+
+        width: 75%;
+        max-width: 280px;
 
         display: flex;
         flex-direction: column;
@@ -454,6 +456,7 @@ body {
         background: var(--surface);
         padding: 0 1.5rem;
 
+        border-radius: 16px;
         max-height: 0;
         overflow: hidden;
 
