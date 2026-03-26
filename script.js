@@ -12,29 +12,35 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // Nav botão animação
-const toggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
 
-if (toggle && navLinks) {
-  toggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // evita conflito com click global
-    navLinks.classList.toggle('active');
-  });
+// Só roda se o botão existir (evita erro)
+if (menuToggle && navLinks) {
 
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+    // Abrir/fechar no botão
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
     });
-  });
 
-  document.addEventListener('click', (e) => {
-    const isClickInsideMenu = navLinks.contains(e.target);
-    const isClickOnButton = toggle.contains(e.target);
+    // Fechar ao clicar em um link
+    navItems.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
 
-    if (!isClickInsideMenu && !isClickOnButton) {
-      navLinks.classList.remove('active');
-    }
-  });
+    // Fechar ao clicar fora
+    document.addEventListener("click", (event) => {
+        const isClickInside =
+            navLinks.contains(event.target) ||
+            menuToggle.contains(event.target);
+
+        if (!isClickInside) {
+            navLinks.classList.remove("active");
+        }
+    });
 }
 
 //Carossel animação

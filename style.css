@@ -443,27 +443,48 @@ body {
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 100%;
         right: 0;
-
-        width: 75%;
-        height: 100vh;
+        width: 100%;
 
         display: flex;
         flex-direction: column;
-        padding: 2rem 1.5rem;
 
         background: var(--surface);
+        padding: 0 1.5rem;
 
-        transform: translateX(100%);
-        transition: transform 0.35s ease;
+        max-height: 0;
+        overflow: hidden;
 
+        opacity: 0;
+
+        transition: 
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease;
+
+        box-shadow: var(--shadow-soft);
         z-index: 999;
     }
 
+    /* MENU ABERTO */
     .nav-links.active {
-        transform: translateX(0);
+        max-height: 300px;
+        opacity: 1;
+        padding: 1rem 1.5rem;
+    }
+
+    /* ANIMAÇÃO DOS ITENS */
+    .nav-links li {
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active li {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .nav-links a {
