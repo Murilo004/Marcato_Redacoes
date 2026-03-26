@@ -371,6 +371,14 @@ body {
 }
 
 /* BUTTONS */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+}
 
 .btn-primary {
     display: inline-block;
@@ -420,6 +428,38 @@ body {
 
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
+     .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+
+        /* escondido por padrão */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
     .correção-grid {
     grid-template-columns: 1fr;
     }

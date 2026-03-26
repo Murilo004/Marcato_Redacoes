@@ -11,6 +11,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+//Nav botão animação
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 //Carossel animação
 const carrossel = document.querySelector('.carrossel');
 const cards = document.querySelectorAll('.card');
@@ -54,3 +66,30 @@ prev.addEventListener('click', () => {
 });
 
 startAutoPlay();
+
+//Carossel delize
+let startX = 0;
+let endX = 0;
+const threshold = 50;
+
+carrossel.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carrossel.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const diff = startX - endX;
+
+  if (Math.abs(diff) > threshold) {
+    if (diff > 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+    resetAutoPlay();
+  }
+}
