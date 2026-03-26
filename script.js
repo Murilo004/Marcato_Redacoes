@@ -43,6 +43,9 @@ const cards = document.querySelectorAll('.card');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 
+let index = 0;
+let interval;
+
 if (carrossel && next && prev && cards.length > 0) {
   function updateCarousel() {
     carrossel.style.transform = `translateX(-${index * 100}%)`;
