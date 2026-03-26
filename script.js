@@ -19,10 +19,6 @@ toggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
 //Carossel animação
 const carrossel = document.querySelector('.carrossel');
 const cards = document.querySelectorAll('.card');
