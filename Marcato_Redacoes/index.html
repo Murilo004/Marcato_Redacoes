@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Proteções básicas contra XSS, clickjacking de recursos e vazamento de referrer -->
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                    img-src 'self' https: data:;
+                    style-src 'self' https://fonts.googleapis.com;
+                    font-src 'self' https://fonts.gstatic.com;
+                    script-src 'self';
+                    connect-src 'self';
+                    object-src 'none';
+                    base-uri 'self';
+                    form-action 'self';">
+
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+
+        <title>Marcato Redações | Curso de Redação para ENEM e Vestibulares</title>
+        <meta name="description" content="Aulas em turmas reduzidas, correção detalhada por competência e acompanhamento próximo para sua redação evoluir de verdade. Conheça os planos da Marcato Redações.">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Marcato Redações | Curso de Redação para ENEM e Vestibulares">
+        <meta property="og:description" content="Correção detalhada, turmas reduzidas e acompanhamento próximo para sua redação sair do papel rumo à nota 1000.">
+        <meta property="og:image" content="Imagens/Logo.webp">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pt_BR">
+
+        <link rel="icon" href="Imagens/Logo.webp" type="image/webp">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Definição global do gradiente usado nos traços-assinatura (swoosh) -->
+        <svg width="0" height="0" class="visually-hidden-defs">
+            <defs>
+                <linearGradient id="swooshGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#D63384"/>
+                    <stop offset="55%" stop-color="#7B2CBF"/>
+                    <stop offset="100%" stop-color="#00D2EB"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <header class="header">
+            <nav class="nav">
+                <a href="#inicio" class="logo" aria-label="Marcato Redações — início">
+                    <img src="Imagens/Logo.webp" alt="" width="38" height="38">
+                    <span class="logo-text">Marcato<span>Redações</span></span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20a%20respeito%20do%20curso%20de%20Reda%C3%A7%C3%A3o."
+                       class="btn btn-primary btn-sm nav-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.46-4.36-1.26l-.31-.19-3.01.79.8-2.93-.2-.3A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.39-5.7c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.2-1.42-1.34-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01s-.42.06-.64.3c-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+                        <span class="btn-label">Falar no WhatsApp</span>
+                    </a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="inicio">
+                <div class="hero-content">
+                    <span class="eyebrow">Curso de redação para ENEM e vestibulares</span>
+
+                    <h1>Escrevendo a história da sua aprovação</h1>
+                    <svg class="swoosh hero-swoosh" viewBox="0 0 150 14" aria-hidden="true">
+                        <path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/>
+                    </svg>
+
+                    <p class="lead">A redação que te trava hoje pode ser a sua aprovação amanhã. Aulas em turmas reduzidas, propostas semanais e correção detalhada, competência por competência, para destravar sua escrita de verdade.</p>
+
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20a%20respeito%20do%20curso%20de%20Reda%C3%A7%C3%A3o."
+                           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.46-4.36-1.26l-.31-.19-3.01.79.8-2.93-.2-.3A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.39-5.7c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.2-1.42-1.34-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01s-.42.06-.64.3c-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="#planos" class="btn btn-ghost">Ver planos</a>
+                    </div>
+
+                    <ul class="hero-badges">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Correção linha a linha</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Turmas reduzidas</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Suporte direto no WhatsApp</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="trust-strip">
+                <div class="trust-grid">
+                    <div class="trust-item reveal">
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </span>
+                        <span>Correção detalhada por competência</span>
+                    </div>
+                    <div class="trust-item reveal">
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </span>
+                        <span>Turmas reduzidas, atenção real</span>
+                    </div>
+                    <div class="trust-item reveal">
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </span>
+                        <span>Foco total no ENEM e vestibulares</span>
+                    </div>
+                    <div class="trust-item reveal">
+                        <span class="icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </span>
+                        <span>Suporte direto pelo WhatsApp</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre" class="section">
+                <div class="section-inner">
+                    <div class="sobre-grid">
+                        <div class="sobre-visual reveal">
+                            <img src="Imagens/Fundo.webp" alt="" loading="lazy">
+                            <div class="quote-badge">
+                                <p>"Toda redação travada é, na verdade, uma redação que ainda não recebeu a correção certa."</p>
+                            </div>
+                        </div>
+
+                        <div class="sobre-text reveal">
+                            <span class="eyebrow">Sobre a Marcato</span>
+                            <h2>Redação não é dom. É treino certo, com a correção certa.</h2>
+
+                            <p>Na Marcato Redações, unimos aulas objetivas, propostas semanais e correção detalhada para destravar a escrita de cada aluno, no ritmo dele. Sem fórmula mágica: é repertório, estrutura e prática constante, com alguém olhando de perto para cada texto.</p>
+
+                            <p>Cada redação enviada pela plataforma E-correção é avaliada competência por competência, com comentários específicos sobre o que já funciona e o que precisa de ajuste. Nada de nota solta sem explicação.</p>
+
+                            <p>O acompanhamento não termina na correção: monitorias, grupo fechado no WhatsApp com repertório sociocultural atualizado e materiais no Drive completam a preparação para o ENEM e os principais vestibulares.</p>
+
+                            <ul class="sobre-list">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Metodologia focada nas 5 competências do ENEM</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Propostas semanais no estilo das principais bancas</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Acompanhamento próximo, do primeiro rascunho à aprovação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="diferenciais" class="section section-alt">
+                <div class="section-inner">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Por que a Marcato</span>
+                        <h2>O que muda na sua redação</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                        <p>Cada detalhe do método pensado para uma única coisa: sua evolução, redação após redação.</p>
+                    </div>
+
+                    <div class="diferenciais-grid">
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></span>
+                            <h3>Correção por competência</h3>
+                            <p>Cada redação é corrigida considerando as 5 competências do ENEM, com comentários claros sobre o que evoluir.</p>
+                        </div>
+
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                            <h3>Turmas reduzidas</h3>
+                            <p>Grupos com até 20 alunos para garantir atenção de verdade em cada aula, sem se perder na multidão.</p>
+                        </div>
+
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+                            <h3>Propostas semanais</h3>
+                            <p>Um novo tema por semana, no estilo das principais bancas, para treinar com constância.</p>
+                        </div>
+
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                            <h3>Repertório sociocultural</h3>
+                            <p>Conteúdo atualizado de atualidades direto no grupo fechado do WhatsApp da turma.</p>
+                        </div>
+
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+                            <h3>Material completo no Drive</h3>
+                            <p>Apostilas, redações nota 1000 comentadas e modelos sempre disponíveis para consulta.</p>
+                        </div>
+
+                        <div class="diferencial-card reveal">
+                            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+                            <h3>Atendimento próximo</h3>
+                            <p>Monitorias e suporte direto com a equipe, sem deixar nenhuma dúvida para trás.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="como-funciona" class="section">
+                <div class="section-inner">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Como funciona</span>
+                        <h2>Do primeiro texto à redação nota 1000</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                    </div>
+
+                    <div class="steps">
+                        <div class="step reveal">
+                            <span class="step-num">1</span>
+                            <h3>Escolha seu plano</h3>
+                            <p>Básico, Intermediário ou Premium: você decide o ritmo e o formato das aulas.</p>
+                        </div>
+                        <div class="step reveal">
+                            <span class="step-num">2</span>
+                            <h3>Receba a proposta da semana</h3>
+                            <p>Um tema novo, no estilo ENEM/vestibular, direto na plataforma.</p>
+                        </div>
+                        <div class="step reveal">
+                            <span class="step-num">3</span>
+                            <h3>Escreva e envie pela E-correção</h3>
+                            <p>Sem complicação: envie sua redação online, de onde estiver.</p>
+                        </div>
+                        <div class="step reveal">
+                            <span class="step-num">4</span>
+                            <h3>Evolua com a correção detalhada</h3>
+                            <p>Feedback por competência mais monitoria para aplicar na próxima redação.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="planos" class="section section-alt">
+                <div class="section-inner">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Planos com aulas</span>
+                        <h2>Planos ofertados</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                        <p>Todos os planos incluem proposta semanal, correção detalhada pela E-correção, materiais no Drive e grupo fechado de WhatsApp. Fale com a gente para conhecer os valores.</p>
+                    </div>
+
+                    <div class="plans-grid">
+                        <article class="plan-card reveal">
+                            <span class="plan-name">Plano Básico</span>
+                            <h3>Para começar com constância</h3>
+                            <p class="plan-tagline">Ideal para quem quer rotina de estudo guiada em grupo.</p>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 aula semanal síncrona online (1h), turma de até 20 alunos</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 monitoria semanal online para apoio pedagógico</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 proposta de redação por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 correção detalhada por semana, via E-correção</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Acesso aos materiais no Drive e ao grupo de WhatsApp</li>
+                            </ul>
+                            <p class="plan-perk">+ 15% de desconto na aula presencial mensal da Marcato Redações</p>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20B%C3%A1sico%20de%20reda%C3%A7%C3%A3o%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+
+                        <article class="plan-card reveal">
+                            <span class="plan-name">Plano Intermediário</span>
+                            <h3>Atenção individual, no seu ritmo</h3>
+                            <p class="plan-tagline">Para quem quer aulas 1:1 e mais flexibilidade.</p>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 aula quinzenal individual (1h), presencial ou online</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 monitoria quinzenal online para apoio pedagógico</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 proposta de redação por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 correção detalhada por semana, via E-correção</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Acesso aos materiais no Drive e ao grupo de WhatsApp</li>
+                            </ul>
+                            <p class="plan-perk">+ 50% de desconto na aula presencial mensal da Marcato Redações</p>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20Intermedi%C3%A1rio%20de%20reda%C3%A7%C3%A3o%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+
+                        <article class="plan-card featured reveal">
+                            <span class="plan-badge">Mais completo</span>
+                            <span class="plan-name">Plano Premium</span>
+                            <h3>Acompanhamento semanal individual</h3>
+                            <p class="plan-tagline">Para quem busca evolução rápida com atenção total.</p>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 aula semanal individual (1h), presencial ou online</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 monitoria semanal para apoio pedagógico</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 proposta de redação por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 correção detalhada por semana, via E-correção</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Acesso aos materiais no Drive e ao grupo de WhatsApp</li>
+                            </ul>
+                            <p class="plan-perk">+ 50% de desconto na aula presencial mensal da Marcato Redações</p>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20Premium%20de%20reda%C3%A7%C3%A3o%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="correcoes" class="section">
+                <div class="section-inner">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Só correção</span>
+                        <h2>Plano individual de correções</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                        <p>Já tem rotina de aulas e só precisa de correção detalhada e constante? Estes planos são para você.</p>
+                    </div>
+
+                    <div class="plans-grid">
+                        <article class="plan-card reveal">
+                            <span class="plan-name">Básico</span>
+                            <h3>4 correções por mês</h3>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 1 redação corrigida por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Correção por competência via E-correção</li>
+                            </ul>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20B%C3%A1sico%20de%20corre%C3%A7%C3%B5es%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+
+                        <article class="plan-card reveal">
+                            <span class="plan-name">Intermediário</span>
+                            <h3>8 correções por mês</h3>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 2 redações corrigidas por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Correção por competência via E-correção</li>
+                            </ul>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20Intermedi%C3%A1rio%20de%20corre%C3%A7%C3%B5es%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+
+                        <article class="plan-card featured reveal">
+                            <span class="plan-badge">Mais completo</span>
+                            <span class="plan-name">Premium</span>
+                            <h3>12 correções por mês</h3>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 3 redações corrigidas por semana</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Correção por competência via E-correção</li>
+                            </ul>
+                            <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%20Tenho%20interesse%20no%20Plano%20Premium%20de%20corre%C3%A7%C3%B5es%20e%20quero%20saber%20mais%20sobre%20valores."
+                               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">Falar sobre esse plano</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+                TODO (Marcato): substituir os depoimentos abaixo por relatos reais de alunos
+                (nome, nota, foto se desejar) antes de publicar o site. Os cards atuais são
+                exemplos ilustrativos para mostrar como a seção funciona.
+            -->
+            <section id="depoimentos" class="section section-alt depoimentos">
+                <div class="section-inner narrow">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Prova social</span>
+                        <h2>Quem aplicou, chegou lá</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                    </div>
+
+                    <div class="carrossel-container reveal">
+                        <button class="btn-nav prev" aria-label="Depoimento anterior">‹</button>
+
+                        <div class="carrossel-track">
+                            <div class="carrossel">
+                                <div class="depo-card">
+                                    <div class="depo-nota"><strong>920</strong><span>na redação</span></div>
+                                    <p class="comentario">"Saí de 600 para 920 em três meses. A correção detalhada me mostrou exatamente onde eu travava."</p>
+                                    <div class="depo-aluno">
+                                        <span class="depo-avatar" aria-hidden="true">MS</span>
+                                        <div class="depo-aluno-info"><strong>Maria S.</strong><span>Aluna do Plano Premium</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="depo-card">
+                                    <div class="depo-nota"><strong>900</strong><span>na redação</span></div>
+                                    <p class="comentario">"Finalmente entendi como estruturar uma redação nota mil. As aulas semanais fizeram toda diferença."</p>
+                                    <div class="depo-aluno">
+                                        <span class="depo-avatar" aria-hidden="true">JP</span>
+                                        <div class="depo-aluno-info"><strong>João P.</strong><span>Aluno do Plano Intermediário</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="depo-card">
+                                    <div class="depo-nota"><strong>940</strong><span>na redação</span></div>
+                                    <p class="comentario">"As correções são muito detalhadas, competência por competência. Recomendo de olhos fechados."</p>
+                                    <div class="depo-aluno">
+                                        <span class="depo-avatar" aria-hidden="true">AL</span>
+                                        <div class="depo-aluno-info"><strong>Ana L.</strong><span>Aluna do Plano Básico</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-nav next" aria-label="Próximo depoimento">›</button>
+                    </div>
+
+                    <div class="carrossel-dots" id="carrosselDots"></div>
+                </div>
+            </section>
+
+            <section id="faq" class="section">
+                <div class="section-inner narrow">
+                    <div class="section-head reveal">
+                        <span class="eyebrow">Dúvidas frequentes</span>
+                        <h2>Perguntas que recebemos bastante</h2>
+                        <svg class="swoosh" viewBox="0 0 150 14" aria-hidden="true"><path d="M2 9 C 30 -2, 60 14, 75 6 S 120 -2, 148 8"/></svg>
+                    </div>
+
+                    <div class="faq-list reveal">
+                        <details class="faq-item">
+                            <summary>As aulas são presenciais ou online?
+                                <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                            </summary>
+                            <div class="faq-body">Depende do plano. O Plano Básico tem aulas em grupo 100% online. Já os planos Intermediário e Premium oferecem aulas individuais, que podem ser presenciais ou online, como preferir. As correções de redação são sempre feitas pela plataforma E-correção.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Preciso já escrever bem para começar?
+                                <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                            </summary>
+                            <div class="faq-body">Não. A metodologia se adapta ao nível de cada aluno, do primeiro parágrafo às últimas ajustes finas para a nota 1000. O importante é a constância nas propostas semanais.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Como funciona a correção das redações?
+                                <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                            </summary>
+                            <div class="faq-body">Você envia sua redação pela plataforma E-correção e recebe de volta uma avaliação detalhada, competência por competência, com comentários específicos sobre pontos fortes e o que ajustar na próxima.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Quais vestibulares vocês atendem?
+                                <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                            </summary>
+                            <div class="faq-body">O foco principal é o ENEM, mas a metodologia também prepara para os principais vestibulares do país. Fale com a gente para saber se atendemos a banca específica que você está estudando.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Como faço para assinar ou tirar outras dúvidas?
+                                <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                            </summary>
+                            <div class="faq-body">É só chamar a gente no WhatsApp. A equipe explica os planos, valores e condições, e te ajuda a escolher o melhor formato para o seu momento de estudo.</div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-inner narrow">
+                    <div class="cta-final reveal">
+                        <h2>Pronta para escrever a sua aprovação?</h2>
+                        <p>Fale agora com a equipe Marcato e descubra o plano ideal para o seu momento de estudo.</p>
+                        <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20a%20respeito%20do%20curso%20de%20Reda%C3%A7%C3%A3o."
+                           class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.46-4.36-1.26l-.31-.19-3.01.79.8-2.93-.2-.3A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.39-5.7c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.2-1.42-1.34-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01s-.42.06-.64.3c-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="contato">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="Imagens/Logo.webp" alt="">
+                        <span>Marcato Redações</span>
+                    </div>
+                    <p>Aulas em turmas reduzidas e correção detalhada para sua redação evoluir, competência por competência, rumo à aprovação.</p>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/marcato_redacoes?igsh=MWJ1ZGVicTBjOGk2bA==" target="_blank" rel="noopener noreferrer" aria-label="Marcato Redações no Instagram"><img src="Imagens/Instagram.webp" alt=""></a>
+                        <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20a%20respeito%20do%20curso%20de%20Reda%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Marcato Redações no WhatsApp"><img src="Imagens/Whats.webp" alt=""></a>
+                        <a href="https://www.tiktok.com/@fernanda.marcato2?_r=1&_t=ZS-97OjA7D5gqD" target="_blank" rel="noopener noreferrer" aria-label="Marcato Redações no TikTok"><img src="Imagens/Tiktok.webp" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#faq">Dúvidas frequentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fale conosco</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5517991011639" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/marcato_redacoes?igsh=MWJ1ZGVicTBjOGk2bA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Marcato Redações. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/5517991011639?text=Ol%C3%A1%2C%20Marcato!%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20a%20respeito%20do%20curso%20de%20Reda%C3%A7%C3%A3o."
+           class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+            <img src="Imagens/Whats.webp" alt="">
+        </a>
+
+    <script src="script.js" defer></script>
+    </body>
+</html>
